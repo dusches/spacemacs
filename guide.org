@@ -1,0 +1,39 @@
+# Мой Репозиторий для гайда по spacemacs и его настройки
+git@github.com:dusches/spacemacs.git
+
+* spacemacs docs
+
+https://www.spacemacs.org/
+
+** конфиги других, посмотреть что добавляют другие
+
+https://github.com/Falkor/spacemacs-config/blob/devel/.spacemacs
+
+* Настройки по библиотекам
+
+** git
+*** Git layer https://develop.spacemacs.org/layers/+source-control/git/README.html
+*** Magit https://magit.vc
+
++ magit
+
+
+
+** org-mode
+
++ настройки
+
++ journal
+
++ org Agenda
+
++ org-roam
+
++ org-brain
+
+** programming
+
++ python
+
++ C++
+
