@@ -17,7 +17,57 @@ https://github.com/Falkor/spacemacs-config/blob/devel/.spacemacs
 
 + magit
 
+#+begin_src lisp
+  (defun dotspacemacs/user-init ()
+    "Initialization for user code:
+  This function is called immediately after `dotspacemacs/init', before layer
+  configuration.
+  It is mostly for variables that should be set before packages are loaded.
+  If you are unsure, try setting them in `dotspacemacs/user-config' first."
+    ;; magit-status отображать в полноэкранном режиме
+    (setq-default git-magit-status-fullscreen t)
 
+  ;; user-config
+        '(git :variables
+              git-enable-magit-delta-plugin t
+              git-enable-magit-gitflow-plugin t
+              git-enable-magit-svn-plugin t
+              git-enable-magit-todos-plugin t)
+
+        (require 'git-commit)
+        (global-git-commit-mode t)
+
+        )
+#+end_src
+
+
+** auto-complete
+
+https://develop.spacemacs.org/layers/+completion/auto-completion/README.html
+
+#+begin_src lisp
+
+   (auto-completion :variables
+        auto-completion-return-key-behavior 'complete
+        auto-completion-tab-key-behavior 'cycle
+        auto-completion-complete-with-key-sequence nil
+        auto-completion-complete-with-key-sequence-delay 0.1
+        auto-completion-minimum-prefix-length 2
+        auto-completion-idle-delay 0.1
+        auto-completion-private-snippets-directory nil
+        ;;снипеты во всплывающем окне
+        auto-completion-enable-snippets-in-popup t
+        ;; документация во всплывающем окне
+        auto-completion-enable-help-tooltip t
+        auto-completion-use-company-box nil
+        auto-completion-enable-sort-by-usage t)
+
+#+end_src
+
+* добавили в исключение company
+   dotspacemacs-excluded-packages '(
+                                    company
+                                    )
 
 ** org-mode
 
